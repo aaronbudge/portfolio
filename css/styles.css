@@ -1,5 +1,9 @@
 .jumbotron{
 	margin-top: 30px;
-	background-color: #1a242f;
-	color: #fff;
+	background-color: #000;
+	color: green;
+}
+
+body{
+	background-color: red;
 }
