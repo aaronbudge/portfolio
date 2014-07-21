@@ -1,34 +1,47 @@
-# Portfolio
-=========
+# MDD Portfolio Project
 
-## MDD Portfolio Project
+## Portfolio Site Deployment Plan
+When creating and deploying updates to the live portfolio site please follow the steps below.
 
-# Portfolio Site Deployment Plan
-To deploy updates to the live portfolio site please follow the steps below.
+To minimize conflicts and confusion among team members, create a unique branch for your new code, develop code to completion, test new code, and then merge with master branch.
 
-## 1. Merge Development Branch with Master
-After completing development of new site code and testing it in your local development environment, merge your development branch with the master branch.
+### 1. Create Local Development Branch
 
-1. Switch to the local master branch:
+  a. Switch to the local master branch
+````
+  git checkout master
+````
+  b. Make sure local master branch is current by pulling from the remote master branch
+````
+  git pull github master
+````
+  c. Create unique branch for new code development
+````
+  git branch newCodeBranch
+  git checkout newCodeBranch
+````
 
-  * `git checkout master`
+### 2. Develop new code to completion
 
-2. Make sure local master branch is current by pulling from the remote master branch:
+a. After completing new code and testing locally commit changes
+````
+  git add -A
+  git commit -m 'Relevant commit message.'
+````
+### 3. Merge development branch with master branch
+````
+  git checkout master
+  git merge newCodeBranch
+````
 
-  * `git pull github master`
+  1. Visit all conflicted files and resolve conflicts and commit
+````
+    git add -A
+    git commit -m ‘Relevant commit message.’
+````
 
-  1. Visit all conflicted files and resolve conflicts... then commit and pull from remote master:
-    * `git add -A`
-    * `git commit -a -m ‘Relevant commit message.’`
-    * `git pull github master`
-
-3. Merge Development Branch with Master Branch
-  * `git merge 'newCode'`
-
-  1. Visit all conflicted files and resolve conflicts... then commit and pull from remote master:
-    * `git add -A`
-    * `git commit -a -m ‘Relevant commit message.’`
-    * `git pull github master`
-
-## Communicate changes to your team
-Let your team know that you have updated the site with some new code.
+### 4. Push updates to remote servers
+````
+  git push github master
+  git push production master
+````
