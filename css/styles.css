@@ -1,5 +1,729 @@
-.jumbotron{
-	margin-top: 30px;
-	background-color: #fff;
-	color: #2c3e50;
+/*!
+ * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/*-------- Main Styles  ---------*/
+
+body {
+    overflow-x: hidden;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+}
+
+.text-muted {
+    color: #777;
+}
+
+/*.text-primary {
+    color: #fed136;
+}*/
+
+p {
+    font-size: 1em;
+    line-height: 1.75;
+}
+
+p.large {
+    font-size: 1.1em;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+}
+
+a {
+    color: #03C9A9;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: #03C9A9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+/*    text-transform: uppercase;*/
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    color: #FA4133;
+}
+
+h1{
+    font-size: 4.25em;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+.bg-light-gray {
+    background-color: #f7f7f7;
+}
+
+.bg-darkest-gray {
+    background-color: #222;
+}
+
+section {
+    padding: 100px 0;
+}
+
+@media(min-width:768px) {
+    section {
+        padding: 150px 0;
+    }
+}
+
+
+/*-------- Button Styles  ---------*/
+
+.btn-primary {
+    border-color: #03C9A9;
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background-color: #03C9A9;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    border-color: #03C9A9;
+    color: #fff;
+    background-color: #03C9A9;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: #03C9A9;
+    background-color: #03C9A9;
+}
+
+.btn-primary .badge {
+    color: #03C9A9;
+    background-color: #fff;
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    border-color: #03C9A9;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-color: #03C9A9;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    border-color: #03BA9D;
+    color: #fff;
+    background-color: #03BA9D;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+    border-color: #03C9A9;
+    background-color: #03C9A9;
+}
+
+.btn-xl .badge {
+    color: #03C9A9;
+    background-color: #fff;
+}
+
+/*-------- NavBar Styles  ---------*/
+
+.navbar-default {
+    border-color: transparent;
+    background-color: #222;
+}
+
+.navbar-default .navbar-brand {
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    color: transparent;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+    color: #03C9A9;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #03C9A9;
+    background-color: #03C9A9;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #03C9A9;
+}
+
+.navbar-default .nav li a {
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+    outline: 0;
+    color: #03C9A9;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    border-radius: 0;
+    color: #03C9A9;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #03C9A9;
+    background-color: transparent;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>a {
+        border-radius: 3px;
+    }
+
+    .navbar-default.navbar-shrink {
+        padding: 10px 0;
+        background-color: #222;
+    }
+
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+        color: #fff;
+    }
+}
+
+/*-------- Header Styles  ---------*/
+
+header {
+    text-align: left;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../img/header-bg.jpg);
+    background-position: bottom right;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .intro-text {
+    padding-top: 350px;
+    padding-bottom: 25px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 500px; /* 550 */
+        padding-bottom: 25px; /* 25 */
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+        font-size: 60px;
+        font-weight: 400;
+        /*font-style: italic;*/
+        line-height: 60px;
+    }
+
+/*    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }*/
+}
+
+/*-------- Portfolio Styles  ---------*/
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(3,201,169,.9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+#portfolio h2{
+    margin-bottom: 2.75em;
+}
+
+#portfolio h3{
+    background-color: #FA4133;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 2em;
+    padding: 0.75em;
+    text-align: center;
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+/*-------- About Styles  ---------*/
+
+section#about{
+    padding: 160px 0 120px;
+}
+
+section#about .col-sm-6 {
+    float: left;
+    padding: 10px 90px 0 70px;
+    width: 50%;
+}
+section#about .col-sm-6:first-of-type {
+    background: url("/img/line.svg") no-repeat scroll right 15px / 10px 1200px rgba(0, 0, 0, 0);
+    padding: 0 80px 0 90px;
+    text-align: right;
+}
+section#about .standard {
+    margin-bottom: 70px;
+}
+section#about h2 {
+    margin-bottom: 2.75em;
+}
+
+section#about h3 {
+    color: #fe4444;
+    font-size: 24px;
+    margin: 0;
+}
+
+@media(max-width:768px) {
+    section#about {
+        padding: 80px 0;
+    }
+    section#about .col-sm-6 {
+        float: none;
+        padding: 0 25px;
+        width: 100%;
+    }
+    section#about .col-sm-6:first-of-type {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+        padding: 0 25px;
+        text-align: left;
+    }
+}
+
+/*-------- Contact Styles  ---------*/
+
+section#contact {
+    background-color: #151515;
+    background-image: url(../img/map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#contact .section-heading {
+    color: #fff;
+}
+
+section#contact .form-group {
+    margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+    padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+    height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+    height: 236px;
+}
+
+section#contact .form-control:focus {
+    border-color: #03C9A9;
+    box-shadow: none;
+}
+
+section#contact::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+section#contact:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #999;
+}
+
+section#contact::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+section#contact:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+section#contact .text-danger {
+    color: #e74c3c;
+}
+
+form{
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 4px;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.form-control{
+    background: rgba(0,0,0,0.45);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    border-radius: 0;
+    box-shadow: none;
+    color: #999;
+}
+
+.form-control:focus{
+    font-size: 1.25em;
+}
+
+.form-control::-moz-placeholder{
+    color: #999;
+    font-size: 1.25em;
+}
+
+/*-------- Footer Styles  ---------*/
+
+footer .row{
+    padding: 10px;
+    margin: 10px;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+/*footer ul.quicklinks {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}*/
+
+ul.social-buttons {
+    margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    outline: 0;
+    color: #fff;
+    background-color: #272F36;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    background-color: #FA4133;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+    outline: 0;
+}
+
+/*-------- Modal Styles  ---------*/
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Century Gothic",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #03C9A9;
+}
+
+::selection {
+    text-shadow: none;
+    background: #03C9A9;
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #000;
 }
